@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+##
+## EPITECH PROJECT, 2018
+## Maths
+## File description:
+## 104intersection
+##
+
+import sys
+import os
+import math as m
+from my_display import *
+from my_vectors import *
+from my_calc import *
+
+def my_choose(opt, P, V, par):
+    if opt == 1:
+        my_sphere(P, V, par)
+    elif opt == 2:
+        my_cylinder(P, V, par)
+    elif opt == 3:
+        my_cone(P, V, par)
+
+def main():
+    my_check_arg()
+    P = P_Coord
+    V = V_Coord
+    opt = int(sys.argv[1])
+    P.x = int(sys.argv[2])
+    P.y = int(sys.argv[3])
+    P.z = int(sys.argv[4])
+    V.x = int(sys.argv[5])
+    V.y = int(sys.argv[6])
+    V.z = int(sys.argv[7])
+    par = int(sys.argv[8])
+    my_choose(opt, P, V, par)
+    sys.exit(0)
+main()
